@@ -14,7 +14,7 @@ def audit_zip_codes(zip_code):
     if len(zip_code)<5:
         zip_code = '99999'
     #follow conventional length of 5 digits
-    if len(zip_code)>6 :
+    if len(zip_code)>5 :
         #unsupported operand type| zip_beginning.match(zip_code)==False :
         #split zipcode if 'dash' present
         # or take the first 5 digits
