@@ -43,7 +43,7 @@ def update_name(name, mapping):
     name = dr.sub('Drive',name)
     cir = re.compile('Cir\.?\s?$')
     name = cir.sub('Circle',name)
-    ct = re.compile('Ct\.?\s?$',flags=re.I) Ignore case
+    ct = re.compile('Ct\.?\s?$',flags=re.I) #re.I == Ignore case
     name = ct.sub('Court',name)
 
     return name
