@@ -7,17 +7,26 @@ This is a short project demonstrating xml parsing of Open Street Maps data, audi
 
 The code is split into 2 main sections:
 1) Audit/Cleaning Code
+
   a) zipcodes.py
+
       Cleans up the zipcodes to a standard format and inserts a missing field '99999' if the 
       entered data does not match the specified format
+
   b) phones.py
+
       Cleans up the phone numbers to a standard format using the python 'phonenumbers' module
       a standard format of '+19999999999' is entered if the field has data that does not fit the 
       'US' format
+
   c) address.py
+
       Standardizes the abbreviated fields of the street names (i.e. 'Str' is changed to 'Street')
+
 2) Creating json Code
+
   a) osm_create_json.py
+
       This program imports the above programs to clean the data and produce a new json file that
       can be imported into a mongo database colection
 
