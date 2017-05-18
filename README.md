@@ -3,7 +3,11 @@ OSM Data Wrangle Project
 
 # Introduction
 
-This is a short project demonstrating xml parsing of Open Street Maps data, auditing/cleaning the file structures, creating a json file, creating a mongo database collection, and then performing queries of the collection.  The area of focuse for this project is the Denver Metro area.  There is a python notebook included in this repository that explains the source and some of the details: 'OSM_Data_Wrangle.ipynb' 
+This is a short project demonstrating xml parsing of Open Street Maps data, auditing/cleaning the file structures, creating a json file, creating a mongo database collection, and then performing queries of the collection.  The area of focuse for this project is the Denver Metro area.  There is a python notebook included in this repository that explains the source and some of the details: 'OSM_Data_Wrangle.ipynb' and copied as a pdf at 'OSM_DW.pdf'.  
+
+#### Code
+
+The following is a brief breakdown of the code that was written to clean and create a json file that was loaded into mongo.
 
 The code is split into 2 main sections:
 1) Audit/Cleaning Code
