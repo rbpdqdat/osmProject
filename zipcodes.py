@@ -1,3 +1,5 @@
+import re
+
 def is_zip(elem):
     return (elem.attrib['k'] == "addr:postcode")
 

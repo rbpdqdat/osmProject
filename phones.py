@@ -1,5 +1,10 @@
+import re
+import phonenumbers
 #convert alphabet phone characters to actual phone numbers
 #
+
+missphone = '+19999999999'
+
 def phone_letter_tonum(alphaphone):
     char_numbers = [('abc',2), ('def',3), ('ghi',4), ('jkl',5), ('mno',6), ('pqrs',7), ('tuv',8), ('wxyz',9)]
     char_num_map = {c:v for k,v in char_numbers for c in k}

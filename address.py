@@ -1,3 +1,7 @@
+import re
+
+street_types = set()
+
 street_type_re = re.compile(r'\b\S+\.?$', re.IGNORECASE)
 
 expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square", "Lane", "Road", 
@@ -17,15 +21,13 @@ k_types = set()
 def audit_k_attributes(elem):
     return elem.attrib['k']
 
-def audit_street_type(street_types, street_name):
+def audit_street_type(street_name):
     m = street_type_re.search(street_name)
     if m:
         street_type = m.group()
         if street_type not in expected:
-            street_types[street_type].add(street_name)
-
-def is_street_name(elem):
-    return (elem.attrib['k'] == "addr:street")
+            street_types.add(street_name)
+    return update_name(street_name,mapping)
 
 #had to relook at the regular expression I was using
 #It was matching all long names and replacing
